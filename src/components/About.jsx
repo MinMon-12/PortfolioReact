@@ -4,7 +4,7 @@ const timelineRows = [
   {
     id: 'row-1',
     year: '2007 - 2018',
-    image:'/about/about-1.jpg',
+    image:`${import.meta.env.BASE_URL}/about/about-1.jpg`,
     title: 'Early passion',
     text: 'My journey began with a love for video games. Spending hours immersed in various games on my computer, I discovered an early fascination with how games were created and dreamed of developing my own one day.',
     side: 'left',
@@ -12,7 +12,7 @@ const timelineRows = [
   {
     id: 'row-2',
     year: '2012 - 2020',
-    image:'/about/about-2.jpg',
+    image:`${import.meta.env.BASE_URL}/about/about-2.jpg`,
     title: 'Building Artistic Foundations',
     text: 'As a kid, I was constantly drawing, whether it was graffiti-style sketches on paper or creative artwork in notebooks and other surfaces I could find. My creativity flourished in these early years, forming the foundation for my later work in digital media.',
     side: 'right',
@@ -20,7 +20,7 @@ const timelineRows = [
   {
     id: 'row-3',
     year: '2021 - 2023',
-    image:'/about/about-3.jpg',
+    image:`${import.meta.env.BASE_URL}/about/about-3.jpg`,
     title: 'Exploring Digital Art',
     text: 'When the world slowed down during the COVID-19 pandemic, I took the opportunity to learn digital drawing with Clip Studio and Adobe Illustrator. I practiced creating portraits, logos, and banners through commissions. This period solidified my commitment to combining my technical skills with my artistic passion.',
     side: 'left',
@@ -28,7 +28,7 @@ const timelineRows = [
   {
     id: 'row-4',
     year: '2024 - Present',
-    image:'/about/about-4.jpg',
+    image:`${import.meta.env.BASE_URL}/about/about-4.jpg`,
     title: 'Pursuing Interactive Media Development',
     text: "Now, I'm studying Interactive Media Development at Camosun College, a field that lets me bring together my love for programming and digital art. This program aligns perfectly with my interests and skills, setting me on a path to create impactful, interactive media.",
     side: 'right',
@@ -37,7 +37,7 @@ const timelineRows = [
     id: 'row-5',
     year: '',
     title: '',
-    image:'/about/about-5.png',
+    image:`${import.meta.env.BASE_URL}/about/about-5.png`,
     text: '',
     side: 'none',
   },
