@@ -44,6 +44,7 @@ const Contact = () => {
     const data = await response.json();
     if (data.success) {
       setResult("Form Submitted Successfully");
+      alert('Message sent');
       event.target.reset();
     } else {
       setResult("Error");
@@ -87,7 +88,7 @@ const Contact = () => {
 
           <div className="contact__row contact__row--actions">
             <button type="submit" className="contact__send" aria-label="Send message">
-              {result ? <span>Send</span> : <span>{result}</span>}
+              {result==="Sending...." ? <span>{result}</span> : <span>Send</span>}
               {/* <span className="contact__send-icon" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
