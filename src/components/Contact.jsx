@@ -48,6 +48,7 @@ const Contact = () => {
       event.target.reset();
     } else {
       setResult("Error");
+      alert('Message was not sent. Try emailing to mrattmon12@gmail.com');
     }
   };
 
