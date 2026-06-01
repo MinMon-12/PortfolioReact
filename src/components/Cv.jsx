@@ -8,7 +8,7 @@ const Cv = () => {
 
       <div className="cv__grid">
         <aside className="cv__left">
-          <img className="cv__photo" src="/cv/cv-photo.png" alt="Min Mon portrait" />
+          <img className="cv__photo" src={`${import.meta.env.BASE_URL}cv/cv-photo.png`} alt="Min Mon portrait" />
 
           <div className="cv__contact">
             <p>Mrattmon12@gmail.com</p>
