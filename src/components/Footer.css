@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.footer {
+  margin-top: 0;
+  background: #3a34df;
+  color: rgba(255, 255, 255, 0.88);
+  padding: 0 18% 32px;
+  box-sizing: border-box;
+  overflow-x: clip;
+}
+
+.footer__accent {
+  height: 3px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-bottom: 28px;
+  background: #3a34df;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.footer__lead {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.footer__tagline {
+  margin: 0 0 10px;
+  font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer__copyright {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer__note {
+  margin: 8px 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer__nav {
+  flex: 0 1 auto;
+}
+
+.footer__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px 22px;
+}
+
+
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0 24px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer__menu {
+    justify-content: flex-start;
+  }
+}

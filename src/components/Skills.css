@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+.skills {
+  background-color: #E3E3E3;
+  padding: 36px 18%;
+  color: #313131;
+}
+
+.skills__heading {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.skills__grid {
+  margin-top: 2em;
+  display: flex;
+  gap: 100px;
+}
+
+.skills__column {
+  width: 50%;
+}
+
+.skills__hero,
+.skills__content {
+  text-align: center;
+}
+
+.skills__title {
+  margin: 0;
+  line-height: 1;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #3a34df;
+  font-family: 'Rock Salt', cursive;
+}
+
+
+.skills__subtitle {
+  margin: 10px 0 0;
+  font-size: 1rem;
+}
+
+.skills__content {
+  margin-top: 40px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  text-align: start;
+}
+
+.skills__line {
+  margin: 0;
+}
+.skills__tools-container{
+  margin-top: 1.5em;
+}
+
+.skills__groups-container {
+  margin-top: 1.5em;
+  display: flex;
+  gap: 16px;
+}
+
+.skills__group-column {
+  flex: 1;
+}
+
+.skills__tools {
+  margin: 1em auto 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 100%;
+  text-align: left;
+  color: #292929;
+}
+
+.skills__tools--design {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  gap: 8px 24px;
+  max-width: 420px;
+}
+
+.skills__tools li {
+  position: relative;
+  margin: 2px 0px;
+}
+
+
+.skills__tools li span{
+  background: #c3c3c3;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+  .skills {
+    padding: 32px 24px 42px;
+  }
+
+
+  .skills__column {
+    width: 100%;
+  }
+
+  .skills__heading {
+    font-size: 1.5rem;
+  }
+
+  .skills__title--design {
+    font-size: 2.5rem;
+  }
+
+  .skills__title--develop {
+    font-size: 2.5rem;
+  }
+
+  .skills__subtitle {
+    font-size: 1rem;
+  }
+
+  .skills__content {
+    font-size: 1rem;
+  }
+
+  .skills__tools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 500px;
+    gap: 8px 12px;
+  }
+
+  .skills__tools--design {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skills__groups-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 700px) {
+  
+  .skills__grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .skills__title--develop{
+    margin-top: 3rem;
+  }
+
+  .skills__content {
+    text-align: center;
+  }
+  .skills__tools {
+    max-width: 300px;
+  }
+}
