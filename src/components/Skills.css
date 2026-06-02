@@ -8,6 +8,7 @@
 
 .skills__heading {
   margin: 0;
+  margin-top: 40px;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
@@ -95,7 +96,7 @@
 
 
 .skills__tools li span{
-  background: #c3c3c3;
+  background: #d8d8d8;
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 0.875rem;

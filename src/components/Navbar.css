@@ -5,10 +5,10 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2%;
-  background: #3A34DF;
+  background: #3a34df;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .navbar__brand {
@@ -21,6 +21,7 @@
   letter-spacing: 0.5px;
   font-family: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .navbar__toggle {

@@ -22,7 +22,12 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="navbar__brand">©Min's Solution</div>
+      <div className="navbar__brand" onClick={()=>{
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }}>©Min's Solution</div>
       <button
         type="button"
         className="navbar__toggle"
@@ -39,7 +44,14 @@ const Navbar = () => {
         <ul className="navbar__menu">
           {navItems.map((item) => (
             <li key={item.label}>
-              <a href={item.href} onClick={closeMenu}>
+              <a href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector(item.href)
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  closeMenu();
+                }}>
                 {item.label}
               </a>
             </li>
