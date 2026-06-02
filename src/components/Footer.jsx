@@ -13,7 +13,6 @@ const Footer = () => {
           <p className="footer__copyright">
             © {year} Min Mon. All rights reserved.
           </p>
-          <p className="footer__note">Portfolio built with React</p>
         </div>
 
       </div>
