@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Min's Portfolio</title>
+    <script>
+      ;(function () {
+        var base = '/PortfolioReact/'
+        var path = window.location.pathname.replace(base, '/')
+        var search = window.location.search || ''
+        var hash = window.location.hash || ''
+        window.sessionStorage.setItem('spa-redirect', path + search + hash)
+        window.location.replace(base)
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>

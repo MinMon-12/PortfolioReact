@@ -1,25 +1,30 @@
+import { useEffect } from 'react'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import Skills from './components/Skills'
-import About from './components/About'
-import Cv from './components/Cv'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import ProjectShowcase from './components/ProjectShowcase'
+import HomePage from './pages/HomePage'
+
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+  return null
+}
 
 function App() {
   return (
-    <main className="app">
-      <Navbar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <About />
-      <Cv />
-      <Contact />
-      <Footer />
-    </main>
+    <BrowserRouter basename={routerBasename}>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/project/:projectId" element={<ProjectShowcase />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
