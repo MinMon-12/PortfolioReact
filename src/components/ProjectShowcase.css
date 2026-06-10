@@ -457,17 +457,17 @@
 
   .project-showcase__hero-image{
     margin: 0 auto;
-    width: 400px;
+    width: 80%;
   }
 
   .project-showcase__hero-details{
-    width: 400px;
+    width: 80%;
     margin: 0 auto;
   }
 
   .project-showcase__section {
     padding-bottom: 32px;
-    width: 400px;
+    width: 80%;
     margin: 0 auto;
   }
 
