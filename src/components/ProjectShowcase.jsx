@@ -107,6 +107,22 @@ const MockupLightbox = ({ images, index, sectionTitle, onClose, onChangeIndex })
   )
 }
 
+const ProjectShowcaseList = ({ items }) => {
+  if (!items?.length) {
+    return null
+  }
+
+  return (
+    <ul className="project-showcase__list">
+      {items.map((item) => (
+        <li key={item} className="project-showcase__list-item">
+          {item}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 const MockupImageTrigger = ({ image, onOpen }) => (
   <button type="button" className="project-showcase__mockup-trigger" onClick={onOpen}>
     <img src={image.src} alt={image.alt} loading="lazy" />
@@ -282,56 +298,49 @@ const ProjectShowcase = () => {
 
           <div className="project-showcase__hero-details">
             <div className="project-showcase__hero-row">
-              <h1 className="project-showcase__name">{project.name}</h1>
+              <div  className='project-showcase__hero-column'>
+                <h1 className="project-showcase__name">{project.name}</h1>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-showcase__demo-btn"
+                >
+                  Live Demo
+                </a>
+              </div>
               <p className="project-showcase__tagline">{project.tagline}</p>
             </div>
 
             <div className="project-showcase__hero-row project-showcase__hero-row--meta">
               <p className="project-showcase__note">{project.note}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-showcase__demo-btn"
-              >
-                Live Demo
-              </a>
             </div>
           </div>
         </section>
 
-        {mockupSections.map((section) => (
-          <MockupImageSection key={section.id} section={section} />
-        ))}
+        {project.learningOutcomes?.length > 0 && (
+          <section className="project-showcase__section">
+            <h2 className="project-showcase__heading">Learning Outcomes</h2>
+            <ProjectShowcaseList items={project.learningOutcomes} />
+          </section>
+        )}
 
-        <section className="project-showcase__section">
-          <h2 className="project-showcase__heading">Overview</h2>
-          <p className="project-showcase__text">{project.overview}</p>
-        </section>
+        {project.features?.length > 0 && (
+          <section className="project-showcase__section">
+            <h2 className="project-showcase__heading">Features</h2>
+            <ProjectShowcaseList items={project.features} />
+          </section>
+        )}
 
-        <section className="project-showcase__section">
-          <h2 className="project-showcase__heading">Insight</h2>
-          <p className="project-showcase__text">{project.insight}</p>
-        </section>
-
-        <section className="project-showcase__section">
-          <h2 className="project-showcase__heading">Features</h2>
-          <p className="project-showcase__text">{project.features}</p>
-        </section>
-
-        <section className="project-showcase__section">
-          {isDesignProject ? (
-            <>
-              <h2 className="project-showcase__heading">Design</h2>
-              <p className="project-showcase__text">{project.design}</p>
-            </>
-          ) : (
-            <>
-              <h2 className="project-showcase__heading">Technologies</h2>
-              <p className="project-showcase__text">{project.technologies}</p>
-            </>
-          )}
-        </section>
+        {!isDesignProject && project.technologies?.length > 0 && (
+          <section className="project-showcase__section">
+            <h2 className="project-showcase__heading">Technologies</h2>
+            <ProjectShowcaseList items={project.technologies} />
+          </section>
+        )}
+          {mockupSections.map((section) => (
+            <MockupImageSection key={section.id} section={section} />
+          ))}
       </div>
 
       <Footer />

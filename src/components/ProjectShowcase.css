@@ -74,6 +74,13 @@
   gap: 8px;
 }
 
+.project-showcase__hero-column{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .project-showcase__hero-row--meta {
   flex-direction: row;
   align-items: center;
@@ -84,8 +91,8 @@
 
 .project-showcase__name {
   margin: 0;
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 400;
   line-height: 1.2;
   color: #3a34df;
 }
@@ -110,7 +117,7 @@
   display: inline-block;
   padding: 10px 20px;
   border-radius: 8px;
-  background-color: #3a34df;
+  background-color: #029e29;
   color: #fff;
   text-decoration: none;
   font-size: 0.875rem;
@@ -120,7 +127,7 @@
 }
 
 .project-showcase__demo-btn:hover {
-  background-color: #2f2ab8;
+  background-color: #026e1d;
 }
 
 .project-showcase__section {
@@ -142,6 +149,22 @@
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.55;
+}
+
+.project-showcase__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.project-showcase__list-item {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  margin-bottom: 0.35rem;
+}
+
+.project-showcase__list-item:last-child {
+  margin-bottom: 0;
 }
 
 .project-showcase__missing {
@@ -376,13 +399,11 @@
   .project-showcase__topbar {
     padding: 20px 24px;
   }
-
+  .project-showcase__hero-image {
+    width: 60%;
+}
   .project-showcase__body {
     padding: 32px 24px 42px;
-  }
-
-  .project-showcase__hero {
-    gap: 24px;
   }
 
   .project-showcase__mockup-grid {
@@ -401,6 +422,10 @@
     width: 100%;
     text-align: center;
     box-sizing: border-box;
+  }
+
+  .project-showcase__demo-btn {
+    width: 40%;
   }
 
   .project-showcase__mockup-grid {
@@ -423,13 +448,27 @@
     padding: 16px;
   }
 
+.project-showcase__hero {
+    flex-direction: column;
+  }
   .project-showcase__body {
     padding: 28px 16px 36px;
   }
 
   .project-showcase__hero-image{
-    width: 100%;
+    margin: 0 auto;
+    width: 400px;
+  }
 
+  .project-showcase__hero-details{
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .project-showcase__section {
+    padding-bottom: 32px;
+    width: 400px;
+    margin: 0 auto;
   }
 
   .project-showcase__name {
