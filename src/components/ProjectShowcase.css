@@ -445,7 +445,9 @@
 
 @media (max-width: 700px) {
   .project-showcase__topbar {
+    min-height: 54px;
     padding: 16px;
+    display: flex;
   }
 
 .project-showcase__hero {
